@@ -1,0 +1,10 @@
+[
+    {
+        "text": "Buy milk",
+        "completed": false
+    },
+    {
+        "text": "Read a book",
+        "completed": true
+    }
+]

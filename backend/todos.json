@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1748625521426",
+    "text": "Breat fast",
+    "completed": true
+  },
+  {
+    "id": "1748628572584",
+    "text": "New API Todo",
+    "completed": false
+  },
+  {
+    "id": "1748629030279",
+    "text": "New API Todo",
+    "completed": false
+  }
+]
