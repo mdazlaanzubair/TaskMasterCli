@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "1748790703033",
+    "text": "New API Todo",
+    "completed": false
+  },
+  {
+    "id": "1748790703959",
+    "text": "Buy milk",
+    "completed": false
+  },
+  {
+    "id": "1748790710293",
+    "text": "Buy milk",
+    "completed": false
+  },
+  {
+    "id": "1748790716575",
+    "text": "Read a book",
+    "completed": false
+  },
+  {
+    "id": "1748790722959",
+    "text": "Read a book",
+    "completed": false
+  },
+  {
+    "id": "1748843202238",
+    "text": "New API Todo",
+    "completed": false
+  }
+]

@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"http-server ./frontend\" \"node ./backend/server.js\""
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,8 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "allure-playwright": "^3.2.2"
+    "allure-playwright": "^3.2.2",
+    "concurrently": "^9.1.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
