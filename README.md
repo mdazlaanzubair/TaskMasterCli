@@ -76,36 +76,15 @@ cd taskmaster-cli
 npm install
 ```
 
-3. Run Backend Server:
+3. Run Server:
 
 ```bash
-cd backend
+npm start
 ```
-
-```bash
-node server.js
-```
-
-Runs on http://localhost:3000
-
-4. Serve Frontend:
-
-```bash
-cd ../frontend
-```
-
-```bash
-npx http-server -p 5500
-```
-
-Make sure index.html is accessible at http://localhost:5500/index.html
-OR right-click index.html in VS Code and “Open with Live Server”
-
-5. Run Tests:
+3. Run Tests:
 Back in the root folder:
 
 ```bash
-chmod +x run-tests.sh
 ./run-tests.sh
 ```
 
