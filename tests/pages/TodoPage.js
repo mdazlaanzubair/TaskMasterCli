@@ -1,16 +1,17 @@
-const { expect } = require('@playwright/test');
+const { expect } = require("@playwright/test");
 
 exports.TodoPage = class TodoPage {
   constructor(page) {
     this.page = page;
-    this.input = page.locator('#newTodo');
-    this.addBtn = page.locator('#addTodo');
-    this.todos = page.locator('#todoList li');
-    this.filter = page.locator('.filter-tab');
+    this.loader = page.locator("#loader");
+    this.input = page.locator("#newTodo");
+    this.addBtn = page.locator("#addTodo");
+    this.todos = page.locator("#todoList li");
+    this.filter = page.locator(".filter-tab");
   }
 
   async goto() {
-    await this.page.goto('/');
+    await this.page.goto("/");
   }
 
   async addTodo(text) {
@@ -23,10 +24,10 @@ exports.TodoPage = class TodoPage {
   }
 
   async deleteTodo(index) {
-    await this.todos.nth(index).locator('button').click();
+    await this.todos.nth(index).locator("button").click();
   }
 
   async applyFilter(filterType) {
-    await this.filter.locator(`[data-filter="${filterType}"]`).click();
+    await this.page.click(`.filter-tab[data-filter="${filterType}"]`);
   }
 };

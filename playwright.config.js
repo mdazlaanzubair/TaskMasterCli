@@ -4,7 +4,7 @@ module.exports = {
   retries: 1,
   reporter: [["list"], ["allure-playwright"]],
   use: {
-    baseURL: "http://192.168.1.104:8080/",
+    baseURL: "http://192.168.0.100:8080",
     headless: true,
     screenshot: "only-on-failure",
     video: "retain-on-failure",

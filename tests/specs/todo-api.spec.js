@@ -1,9 +1,12 @@
 const { test, expect, request } = require("@playwright/test");
+const { allure } = require("allure-playwright");
 
 const API_URL = "http://localhost:3000";
 
 test.describe("TODO API Tests", () => {
   test("GET /todos should return 200 and an array", async ({ request }) => {
+    allure.label({ name: "feature", value: "API" });
+    allure.severity("critical");
     const res = await request.get(`${API_URL}/todos`);
     expect(res.status()).toBe(200);
     const body = await res.json();
@@ -11,6 +14,8 @@ test.describe("TODO API Tests", () => {
   });
 
   test("POST /todos should create a new todo", async ({ request }) => {
+    allure.label({ name: "feature", value: "API" });
+    allure.severity("critical");
     const res = await request.post(`${API_URL}/todos`, {
       data: { text: "New API Todo" },
     });
@@ -19,9 +24,6 @@ test.describe("TODO API Tests", () => {
     expect(body.text).toBe("New API Todo");
   });
 
-  //
-  // ─── API TESTS ─────────────────────────────────────────────────────────────────
-  //
   // 3. POST empty text => 400
   test("GIVEN empty text, WHEN POST /todos with { text: '' }, THEN respond 400 Bad Request", async ({
     request,
